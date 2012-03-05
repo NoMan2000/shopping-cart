@@ -1,4 +1,10 @@
 ShoppingCart2::Application.routes.draw do
+  resources :orders
+
+  resources :line_items
+
+  resources :carts
+
   get "store/index"
   root to: 'store#index', as: 'store'
   resources :products
